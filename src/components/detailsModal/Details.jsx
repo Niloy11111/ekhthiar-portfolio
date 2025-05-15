@@ -4,17 +4,20 @@ import "./details.css";
 const Details = ({ details, setOpen }) => {
   return (
     <div className="reserve z-30  ">
-      <div className="rContainer bg-[#101826]  rounded-lg shadow-2xl w-[700px] h-[400px] ">
+      <div className="rContainer bg-[#101826]  rounded-lg shadow-2xl w-[85%] md:w-[700px] h-[450px] md:h-[400px] ">
         <X
           className="absolute w-[40px] h-[40px]  bg-yellow top-4 right-4 hover:bg-red cursor-pointer"
           onClick={() => setOpen(false)}
         />
-        <div className="flex justify-between items-center mt-24  mb-4">
-          <h1>Technology Used</h1>
+        <div className="flex md:flex-col justify-center md:gap-5 flex-col  gap-5  items-center md:mt-16 mt-24  mb-8 ">
+          <h1 className="border-b-2 border-yellow">Technologies</h1>
 
-          <p className="flex gap-4 font-semibold  ">
+          <p className="flex md:flex-row  justify-center flex-wrap gap-3 font-semibold  ">
             {details.technologies.map((tech, i) => (
-              <span key={i}> *{tech}</span>
+              <span key={i}>
+                <span className="text-red">*</span>
+                {tech}
+              </span>
             ))}
           </p>
         </div>
@@ -24,14 +27,19 @@ const Details = ({ details, setOpen }) => {
             to={details?.frontend}
           >
             {" "}
-            <button className="cursor-pointer">Frontend Code</button>
+            <button className="cursor-pointer md:flex gap-2 justify-center w-full mx-auto">
+              <span>Frontend</span>{" "}
+              <span className="md:block hidden">Code</span>
+            </button>
           </Link>
           <Link
             className="cursor-pointer   w-full px-7 py-3 rounded-xl text-center border border-yellow hover:bg-yellow transition-all duration-150"
             to={details?.backend}
           >
             {" "}
-            <button className="cursor-pointer"> Backend Code</button>
+            <button className="cursor-pointer md:flex gap-2 justify-center w-full mx-auto">
+              <span>Backend</span> <span className="md:block hidden">Code</span>
+            </button>
           </Link>
         </div>
         <Link className="cursor-pointer  " to={details?.live}>

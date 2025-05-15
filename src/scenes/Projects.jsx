@@ -43,10 +43,7 @@ const Project = ({ details }) => {
     <motion.div variants={projectVariant} className="relative ">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{details?.title}</p>
-        {/* <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p> */}
+
         <div className="flex mt-5 w-full justify-between gap-5">
           <button
             onClick={handleClick}
@@ -58,7 +55,7 @@ const Project = ({ details }) => {
       </div>
       <img
         className="w-[400px] h-[400px]"
-        src={`/src/assets/${projectTitle}.png`}
+        src={`/images/${projectTitle}.png`}
         alt={projectTitle}
       />
 
@@ -91,9 +88,8 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+          Here are some of the real-world projects I’ve built during my learning
+          journey
         </p>
       </motion.div>
 

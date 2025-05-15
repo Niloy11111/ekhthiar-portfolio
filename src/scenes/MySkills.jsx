@@ -1,7 +1,18 @@
 /* eslint-disable no-unused-vars */
+import css from "../assets/css.svg";
+import figma from "../assets/figma.png";
+import firebase from "../assets/firebase.svg";
+import html from "../assets/html.svg";
+import JavaScript from "../assets/js.svg";
+import nodejs from "../assets/node.svg";
+import react from "../assets/react.svg";
+import tailwind from "../assets/tailwind.svg";
+
 import { motion } from "framer-motion";
+import skill2 from "../assets/skills-image.png";
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
+
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
@@ -24,8 +35,8 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Here are some of the key technologies and tools I specialize in as a
-            web developer.
+            These are the key technologies and tools I specialize in as a web
+            developer.
           </p>
         </motion.div>
 
@@ -35,18 +46,10 @@ const MySkills = () => {
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
               before:w-full before:h-full  before:z-[-1]"
             >
-              <img
-                alt="skills"
-                className="z-10 saturate-200   "
-                src="src/assets/skills-image.png"
-              />
+              <img alt="skills" className="z-10 saturate-200   " src={skill2} />
             </div>
           ) : (
-            <img
-              alt="skills"
-              className="z-10 saturate-200"
-              src="src/assets/skills-image.png"
-            />
+            <img alt="skills" className="z-10 saturate-200" src={skill2} />
           )}
         </div>
       </div>
@@ -67,11 +70,7 @@ const MySkills = () => {
         >
           <div className="bg-[#101826] border-b-2 hover:border-b-0  hover:border-t-2  border-red  flex justify-center items-center   lg:w-[250px] h-[80px] ">
             <div className="flex items-center gap-5">
-              <img
-                className="mx-auto w-[50px] h-[50px]"
-                src="/src/assets/html.svg"
-                alt=""
-              />
+              <img className="mx-auto w-[50px] h-[50px]" src={html} alt="" />
               <p className="text-center font-semibold text-2xl"> HTML</p>
             </div>
           </div>
@@ -89,11 +88,7 @@ const MySkills = () => {
         >
           <div className="bg-[#101826] border-b-2 hover:border-b-0  hover:border-t-2  border-red  flex justify-center items-center   lg:w-[250px] h-[80px] ">
             <div className="flex items-center gap-5">
-              <img
-                className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/css.svg"
-                alt=""
-              />
+              <img className="mx-auto   w-[50px] h-[50px]" src={css} alt="" />
               <p className="text-center font-semibold text-3xl">CSS</p>
             </div>
           </div>
@@ -113,7 +108,7 @@ const MySkills = () => {
             <div className="flex items-center gap-5">
               <img
                 className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/js.svg"
+                src={JavaScript}
                 alt=""
               />
               <p className="text-center font-semibold text-3xl">JavaScript</p>
@@ -133,11 +128,7 @@ const MySkills = () => {
         >
           <div className="bg-[#101826] border-b-2 hover:border-b-0  hover:border-t-2  border-red  flex justify-center items-center   lg:w-[250px] h-[80px] ">
             <div className="flex items-center gap-5">
-              <img
-                className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/react.svg"
-                alt=""
-              />
+              <img className="mx-auto   w-[50px] h-[50px]" src={react} alt="" />
               <p className="text-center font-semibold text-3xl">React</p>
             </div>
           </div>
@@ -158,7 +149,7 @@ const MySkills = () => {
             <div className="flex items-center gap-5">
               <img
                 className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/tailwind.svg"
+                src={tailwind}
                 alt=""
               />
               <p className="text-center font-semibold text-3xl">Tailwind</p>
@@ -183,7 +174,7 @@ const MySkills = () => {
             <div className="flex items-center gap-5">
               <img
                 className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/firebase.svg"
+                src={firebase}
                 alt=""
               />
               <p className="text-center font-semibold text-3xl">Firebase</p>
@@ -203,12 +194,8 @@ const MySkills = () => {
         >
           <div className="bg-[#101826] border-b-2 hover:border-b-0  hover:border-t-2  border-red  flex justify-center items-center   lg:w-[250px] h-[80px] ">
             <div className="flex items-center gap-5">
-              <img
-                className="mx-auto   w-[50px] h-[50px]"
-                src="/src/assets/tailwind.svg"
-                alt=""
-              />
-              <p className="text-center font-semibold text-3xl">Tailwind</p>
+              <img className="mx-auto   w-[50px] h-[50px]" src={figma} alt="" />
+              <p className="text-center font-semibold text-3xl">Figma</p>
             </div>
           </div>
         </motion.div>
@@ -300,6 +287,28 @@ const MySkills = () => {
                 alt=""
               />
               <p className="text-center font-semibold text-3xl">Redux</p>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className=""
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="bg-[#101826] border-b-2 hover:border-b-0  hover:border-t-2  border-red  flex justify-center items-center   lg:w-[250px] h-[80px] ">
+            <div className="flex items-center gap-5">
+              <img
+                className="mx-auto  rounded-xl w-[50px] h-[50px]"
+                src={nodejs}
+                alt=""
+              />
+              <p className="text-center font-semibold text-3xl">Node.js</p>
             </div>
           </div>
         </motion.div>

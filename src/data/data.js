@@ -4,7 +4,15 @@ export const projectOne = {
   live: "https://basa-finder-client-two.vercel.app/",
   frontend: "https://github.com/Niloy11111/BasaFinder-Client",
   backend: "https://github.com/Niloy11111/BasaFinder-Server",
-  technologies: ["NextJs", "Tailwind", "JWT", "MongoDB", "Express"],
+  technologies: [
+    "NextJs",
+    "Tailwind CSS",
+    "Redux Toolkit (RTK)",
+    "JWT",
+    "MongoDB",
+    "Express.js",
+    "Node.js",
+  ],
 };
 
 export const projectTwo = {
@@ -13,7 +21,16 @@ export const projectTwo = {
   live: "https://bike-bari-6a.netlify.app/",
   frontend: "https://github.com/Niloy11111/bike-shop-client",
   backend: "https://github.com/Niloy11111/bike-shop-server",
-  technologies: ["React", "Redux", "Tailwind", "JWT", "MongoDB", "Express"],
+  technologies: [
+    "React",
+    "Redux Toolkit (RTK)",
+    "Tailwind CSS",
+    "MUI",
+    "JWT",
+    "MongoDB",
+    "Express.js",
+    "Node.js",
+  ],
 };
 
 export const projectThree = {
@@ -22,7 +39,7 @@ export const projectThree = {
   live: "https://hostel-management-3967.netlify.app/",
   frontend: "https://github.com/Niloy11111/hostel-management-client",
   backend: "https://github.com/Niloy11111/hostel-management-server",
-  technologies: ["React", "Tailwind", "Context API", "JSON Server"],
+  technologies: ["React", "Tailwind CSS", "Firebase", "MongoDB", "Express.js"],
 };
 
 export const projectFour = {
@@ -31,7 +48,14 @@ export const projectFour = {
   live: "https://job-management-71e90b.netlify.app/",
   frontend: "https://github.com/Niloy11111/job-management-client",
   backend: "https://github.com/Niloy11111/job-management-server",
-  technologies: ["React", "Node.js", "MongoDB", "JWT", "Framer Motion"],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Firebase",
+    "Express.js",
+    "Node.js",
+    "MongoDB",
+  ],
 };
 
 export const projectFive = {
@@ -40,7 +64,7 @@ export const projectFive = {
   live: "https://easy-admission.netlify.app/",
   frontend: "https://github.com/Niloy11111/simple-admission-client",
   backend: "https://github.com/Niloy11111/simple-admission-server",
-  technologies: ["React", "Tailwind", "Express", "MongoDB"],
+  technologies: ["React", "Tailwind CSS", "Express.js", "Node.js", "MongoDB"],
 };
 
 export const projectSix = {
@@ -58,5 +82,10 @@ export const projectSeven = {
   live: "https://spiritualcall.vercel.app/",
   frontend: "https://github.com/Niloy11111/SpiritualCall-frontend",
   backend: "https://github.com/Niloy11111/SpiritualCall-backend",
-  technologies: ["Nextjs", "Express", "Tailwind"],
+  technologies: [
+    "Nextjs",
+    "SQLite (Read/Query Only)",
+    "Node.js",
+    "Tailwind CSS",
+  ],
 };
