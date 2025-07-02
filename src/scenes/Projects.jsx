@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import LineGradient from "../components/LineGradient";
-import Details from "../components/detailsModal/Details";
-import {
-  projectFive,
-  projectFour,
-  projectOne,
-  projectSeven,
-  projectSix,
-  projectThree,
-  projectTwo,
-} from "../data/data";
 
 const container = {
   hidden: {},
@@ -27,10 +17,12 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ details }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-10 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-  const projectTitle = details?.title.split(" ").join("-").toLowerCase();
+// const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
+//   bg-grey z-10 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+
+const Project = ({ project }) => {
+  const overlayStyles = ``;
+  const projectTitle = project?.title.split(" ").join("-").toLowerCase();
 
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -41,35 +33,71 @@ const Project = ({ details }) => {
 
   return (
     <motion.div variants={projectVariant} className="relative ">
-      <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{details?.title}</p>
+      <div className=" upcomingCard">
+        <div className="">
+          <img
+            className="h-[370px] w-full"
+            src={`/images/${projectTitle}.png`}
+            alt={projectTitle}
+          />
+        </div>
 
-        <div className="flex mt-5 w-full justify-between gap-5">
-          <button
-            onClick={handleClick}
-            className="cursor-pointer w-full  text-white bg-yellow px-7 py-3 "
-          >
-            Details
-          </button>
+        <div
+          style={{
+            backgroundColor: "rgba(11, 11, 11, 0.60)",
+          }}
+          className=" upcomingCardContent     "
+        >
+          <div className="bg-p1 child h-[100px] w-[85%] absolute left-1/2 -translate-x-1/2 flex flex-col justify-center items-center rounded-xl">
+            <h1 className="text-white mb-3 font-bold">Project RentMode</h1>
+            <Link to={`/details/${project?.id}`}>
+              <button className="text-white  cursor-pointer bg-black px-6 rounded py-2  ">
+                Details
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-      <img
-        className="w-[400px] h-[400px]"
-        src={`/images/${projectTitle}.png`}
-        alt={projectTitle}
-      />
-
-      {openModal && <Details details={details} setOpen={setOpenModal} />}
     </motion.div>
   );
 };
 
+// <div className="bg-blend-ov">
+//         <p className="text-2xl font-playfair">{details?.title}</p>
+
+//         <div className="flex mt-5 w-full justify-between gap-5">
+//           <button
+//             onClick={handleClick}
+//             className="cursor-pointer rounded w-full  text-white bg-p1 px-7 py-3 "
+//           >
+//             Details
+//           </button>
+//         </div>
+//       </div>
+//       <img
+//         className="w-[400px] h-[400px]"
+//         src={`/images/${projectTitle}.png`}
+//         alt={projectTitle}
+//       />
+
+//       {openModal && <Details details={details} setOpen={setOpenModal} />}
+
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
+
+  console.log("here", projects);
+
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="  pb-16 ">
       {/* HEADINGS */}
       <motion.div
-        className="md:w-2/5 mx-auto text-center"
+        className=" md:w-2/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -81,7 +109,7 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
+            <span className="">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
@@ -94,40 +122,20 @@ const Projects = () => {
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="flex justify-center">
-        <motion.div
-          className="sm:grid sm:grid-cols-3"
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {/* ROW 1 */}
-          <div
-            className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+      <div className="">
+        {projects.length > 0 && (
+          <motion.div
+            className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 md:gap-10 "
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
-            BEAUTIFUL USER INTERFACES
-          </div>
-          <Project details={projectOne} />
-          <Project details={projectTwo} />
-
-          {/* ROW 2 */}
-          <Project details={projectThree} />
-          <Project details={projectFour} />
-          <Project details={projectFive} />
-
-          {/* ROW 3 */}
-          <Project details={projectSix} />
-          <Project details={projectSeven} />
-
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            SMOOTH USER EXPERIENCE
-          </div>
-        </motion.div>
+            {projects.map((project) => (
+              <Project project={project} />
+            ))}
+          </motion.div>
+        )}
       </div>
     </section>
   );

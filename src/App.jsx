@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { ToastContainer } from "react-toastify";
+
 import { useEffect, useState } from "react";
-import LineGradient from "./components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
+import AboutMe from "./scenes/AboutMe";
 import Contact from "./scenes/Contact";
 import DotGroup from "./scenes/DotGroup";
 import Footer from "./scenes/Footer";
@@ -27,13 +29,14 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue font-spacegrotesk">
+    <div className=" app bg-deep-blue ">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      {/*  before <div className="w-5/6 mx-auto md:h-full"> */}
+      <div className="md:h-full ">
         {isDesktop && (
           <DotGroup
             selectedPage={selectedPage}
@@ -43,9 +46,16 @@ function App() {
         <Landing setSelectedPage={setSelectedPage} />
       </div>
 
-      <LineGradient />
-
-      <div className="w-5/6 mx-auto md:h-full ">
+      <div className=" w-[70%] mx-auto  ">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("about")}
+        >
+          <AboutMe />
+        </motion.div>
+      </div>
+      <div className="w-[70%] mx-auto   ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -55,8 +65,7 @@ function App() {
         </motion.div>
       </div>
 
-      <LineGradient />
-      <div className="w-5/6 mx-auto">
+      <div className="w-[70%] mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -66,8 +75,7 @@ function App() {
         </motion.div>
       </div>
 
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="md:h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -78,6 +86,7 @@ function App() {
       </div>
 
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

@@ -13,6 +13,8 @@ export const projectOne = {
     "Express.js",
     "Node.js",
   ],
+  adminEmail: "admin@gmail.com",
+  adminPassword: "12345678",
 };
 
 export const projectTwo = {
@@ -31,6 +33,8 @@ export const projectTwo = {
     "Express.js",
     "Node.js",
   ],
+  adminEmail: "admin@gmail.com",
+  adminPassword: "secure",
 };
 
 export const projectThree = {
@@ -40,6 +44,8 @@ export const projectThree = {
   frontend: "https://github.com/Niloy11111/hostel-management-client",
   backend: "https://github.com/Niloy11111/hostel-management-server",
   technologies: ["React", "Tailwind CSS", "Firebase", "MongoDB", "Express.js"],
+  adminEmail: "hero@hero.com",
+  adminPassword: "abcdNn&1",
 };
 
 export const projectFour = {

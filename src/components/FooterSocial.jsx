@@ -2,7 +2,9 @@ import facebook from "../assets/facebook.png";
 import github from "../assets/github.png";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
-const SocialMediaIcons = ({ section }) => {
+import linkedinFooter from "../assets/linkedinFooter.png";
+
+const FooterSocialMediaIcons = ({ section }) => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
@@ -12,10 +14,12 @@ const SocialMediaIcons = ({ section }) => {
         rel="noreferrer"
       >
         <img
-          className="w-[40px]  h-[40px]"
+          className="w-[38px]  h-[38px]"
           alt="linkedin-link"
-          src={linkedin}
+          src={section === "footer" ? linkedinFooter : linkedin}
         />
+
+        <img src={linkedinFooter} alt="" />
       </a>
       <a
         className=" hover:opacity-70 transition duration-500"
@@ -54,4 +58,4 @@ const SocialMediaIcons = ({ section }) => {
   );
 };
 
-export default SocialMediaIcons;
+export default FooterSocialMediaIcons;
