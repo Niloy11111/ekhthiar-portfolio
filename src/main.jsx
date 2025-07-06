@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <div className="font-Poppins">
+  <div className="font-Ovo">
     <Favicon url="https://i.ibb.co/Pxf1xtZ/psd-smiling-3d-receptionist-isolated-transparent-background-753500-460-removebg-preview.png" />
     <StrictMode>
       <RouterProvider router={router} />

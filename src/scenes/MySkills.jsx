@@ -17,6 +17,24 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const MySkills = () => {
+  const skills = [
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "JavaScript", icon: JavaScript },
+    { name: "TypeScript", icon: TypeScript },
+    { name: "React", icon: react },
+    { name: "Next.js", icon: next },
+    { name: "Tailwind", icon: tailwind },
+    { name: "Node.js", icon: nodejs },
+    {
+      name: "Express",
+      icon: "https://www.manektech.com/storage/developer/1646733543.webp",
+    },
+    { name: "MongoDB", icon: mongo },
+    { name: "Redux", icon: "https://redux.js.org/img/redux.svg" },
+    { name: "Firebase", icon: firebase },
+    { name: "Figma", icon: figma },
+  ];
   const isAboveLarge = useMediaQuery("(min-width: 1500px)");
   // const isAboveSmall = useMediaQuery("(min-width: px)");
   return (
@@ -50,618 +68,341 @@ const MySkills = () => {
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
               before:w-full before:h-full  before:z-[-1]"
             >
-              <img alt="skills" className="z-10   " src={skill2} />
+              <img alt="skills" className="z-10 rounded-xl   " src={skill2} />
             </div>
           ) : (
-            <img alt="skills" className="z-10 " src={skill2} />
+            <img alt="skills" className="z-10 rounded-xl " src={skill2} />
           )}
         </div>
       </div>
 
       {/* SKILLS */}
-      {isAboveLarge && (
-        <>
-          <div className="flex flex-col md:flex-row md:justify-center mt-24  gap-5">
-            {/* EXPERIENCE */}
-            <motion.div
-              className=" "
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto w-[50px] h-[50px]"
-                    src={html}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-2xl"> HTML</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className="lg:lg:mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={css}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">CSS</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=" lg:mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={JavaScript}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">
-                    JavaScript
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=" lg:mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={react}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">React</p>
-                </div>
-              </div>
-            </motion.div>
 
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={tailwind}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Tailwind</p>
-                </div>
+      <>
+        {/* <div className="flex sm:flex-row sm:flex-wrap flex-col  justify-center mt-24  gap-5">
+          <motion.div
+            className=" "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img className="mx-auto w-[50px] h-[50px]" src={html} alt="" />
+                <p className="text-center font-semibold text-2xl"> HTML</p>
               </div>
-            </motion.div>
-          </div>
-          <div className="flex flex-col md:flex-row md:justify-center mt-5  gap-5">
-            <motion.div
-              className="lg:mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={firebase}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Firebase</p>
-                </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img className="mx-auto   w-[50px] h-[50px]" src={css} alt="" />
+                <p className="text-center font-semibold text-3xl">CSS</p>
               </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={figma}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Figma</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={TypeScript}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">
-                    TypeScript
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className=" skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={next}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Nextjs</p>
-                </div>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className="lg:mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-1">
-                  <img
-                    className="mx-auto w-[50px] h-[50px]"
-                    src={mongo}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">MongoDB</p>
-                </div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={react}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">React</p>
               </div>
-            </motion.div>
-          </div>
-          <div className="flex flex-col md:flex-row md:justify-center mt-5 md:flex  lg:-mt-3  gap-5 md:mb-20">
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src="https://redux.js.org/img/redux.svg"
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Redux</p>
-                </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={tailwind}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Tailwind</p>
               </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto  rounded-xl w-[50px] h-[50px]"
-                    src={nodejs}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Node.js</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src="https://www.manektech.com/storage/developer/1646733543.webp"
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Express</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </>
-      )}
-      {!isAboveLarge && (
-        <>
-          <div className="flex sm:flex-row sm:flex-wrap flex-col  justify-center mt-24  gap-5">
-            <motion.div
-              className=" "
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto w-[50px] h-[50px]"
-                    src={html}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-2xl"> HTML</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={css}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">CSS</p>
-                </div>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={react}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">React</p>
-                </div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={firebase}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Firebase</p>
               </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={tailwind}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Tailwind</p>
-                </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={figma}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Figma</p>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=" "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={JavaScript}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">JavaScript</p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className=" shadow-xl border-p1 border-b-0 rounded-lg bg-[#fff5ef] border hover:border-b-0  border-t-2    flex justify-center items-center sm:w-[250px] xs:w-full h-[80px] ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={TypeScript}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">TypeScript</p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className=" shadow-xl border-p1 border-b-0 rounded-lg bg-[#fff5ef] border hover:border-b-0  border-t-2    flex justify-center items-center sm:w-[250px] xs:w-full h-[80px] ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src={next}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Nextjs</p>
+              </div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={firebase}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Firebase</p>
-                </div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-1">
+                <img className="mx-auto w-[50px] h-[50px]" src={mongo} alt="" />
+                <p className="text-center font-semibold text-3xl">MongoDB</p>
               </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={figma}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Figma</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=" "
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={JavaScript}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">
-                    JavaScript
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className=" shadow-xl border-p1 border-b-0 rounded-lg bg-[#fff5ef] border hover:border-b-0  border-t-2    flex justify-center items-center sm:w-[250px] xs:w-full h-[80px] ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={TypeScript}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">
-                    TypeScript
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className=" shadow-xl border-p1 border-b-0 rounded-lg bg-[#fff5ef] border hover:border-b-0  border-t-2    flex justify-center items-center sm:w-[250px] xs:w-full h-[80px] ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src={next}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Nextjs</p>
-                </div>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-1">
-                  <img
-                    className="mx-auto w-[50px] h-[50px]"
-                    src={mongo}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">MongoDB</p>
-                </div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src="https://redux.js.org/img/redux.svg"
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Redux</p>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto  rounded-xl w-[50px] h-[50px]"
+                  src={nodejs}
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Node.js</p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="skillCard ">
+              <div className="flex items-center gap-5">
+                <img
+                  className="mx-auto   w-[50px] h-[50px]"
+                  src="https://www.manektech.com/storage/developer/1646733543.webp"
+                  alt=""
+                />
+                <p className="text-center font-semibold text-3xl">Express</p>
+              </div>
+            </div>
+          </motion.div>
+        </div> */}
 
+        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24">
+          {skills.map((skill, index) => (
             <motion.div
-              className=""
+              key={skill.name}
+              className="group"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               variants={{
-                hidden: { opacity: 0, y: 50 },
+                hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
+              <div
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl 
+        border border-gray-100 hover:border-blue-200
+        transition-all duration-500 hover:-translate-y-2
+        flex flex-col items-center text-center space-y-4"
+              >
+                <div
+                  className="w-16 h-16 bg-gradient-to-br from-blue-50 to-purple-50 
+          rounded-full flex items-center justify-center
+          transition-transform duration-300 group-hover:scale-110"
+                >
                   <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src="https://redux.js.org/img/redux.svg"
-                    alt=""
+                    className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+                    src={skill.icon}
+                    alt={skill.name}
                   />
-                  <p className="text-center font-semibold text-3xl">Redux</p>
                 </div>
+
+                <h3
+                  className="font-semibold text-lg text-gray-800 
+          transition-colors duration-300 group-hover:text-blue-600"
+                >
+                  {skill.name}
+                </h3>
               </div>
             </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto  rounded-xl w-[50px] h-[50px]"
-                    src={nodejs}
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Node.js</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="skillCard ">
-                <div className="flex items-center gap-5">
-                  <img
-                    className="mx-auto   w-[50px] h-[50px]"
-                    src="https://www.manektech.com/storage/developer/1646733543.webp"
-                    alt=""
-                  />
-                  <p className="text-center font-semibold text-3xl">Express</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </>
-      )}
+          ))}
+        </div>
+      </>
     </section>
   );
 };

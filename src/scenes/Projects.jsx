@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import LineGradient from "../components/LineGradient";
-
 const container = {
   hidden: {},
   visible: {
@@ -16,9 +16,6 @@ const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };
-
-// const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-//   bg-grey z-10 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
 
 const Project = ({ project }) => {
   const overlayStyles = ``;
@@ -49,10 +46,23 @@ const Project = ({ project }) => {
           className=" upcomingCardContent     "
         >
           <div className="bg-p1 child h-[100px] w-[85%] absolute left-1/2 -translate-x-1/2 flex flex-col justify-center items-center rounded-xl">
-            <h1 className="text-white mb-3 font-bold">Project RentMode</h1>
+            <h1 className="text-white mb-3 font-bold">
+              Project {project?.name}
+            </h1>
             <Link to={`/details/${project?.id}`}>
-              <button className="text-white  cursor-pointer bg-black px-6 rounded py-2  ">
-                Details
+              <button
+                className="cursor-pointer group text-white bg-black hover:bg-gray-800 
+    px-6 py-2 rounded-lg font-medium
+    transition-all duration-300 ease-out
+    transform hover:scale-105 hover:-translate-y-1
+    shadow-lg hover:shadow-xl
+    border border-gray-700 hover:border-gray-600
+    flex items-center gap-2"
+              >
+                <span className="transition-all duration-300 group-hover:tracking-wider">
+                  Details
+                </span>
+                <MdArrowOutward />
               </button>
             </Link>
           </div>
@@ -61,26 +71,6 @@ const Project = ({ project }) => {
     </motion.div>
   );
 };
-
-// <div className="bg-blend-ov">
-//         <p className="text-2xl font-playfair">{details?.title}</p>
-
-//         <div className="flex mt-5 w-full justify-between gap-5">
-//           <button
-//             onClick={handleClick}
-//             className="cursor-pointer rounded w-full  text-white bg-p1 px-7 py-3 "
-//           >
-//             Details
-//           </button>
-//         </div>
-//       </div>
-//       <img
-//         className="w-[400px] h-[400px]"
-//         src={`/images/${projectTitle}.png`}
-//         alt={projectTitle}
-//       />
-
-//       {openModal && <Details details={details} setOpen={setOpenModal} />}
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

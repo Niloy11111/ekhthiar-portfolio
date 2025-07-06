@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
+import { FaArrowRight } from "react-icons/fa";
 import contact from "../assets/contact-image.jpeg";
 import LineGradient from "../components/LineGradient";
 const Contact = () => {
@@ -37,9 +38,9 @@ const Contact = () => {
       // handleHotToast();
     }
   };
-
+  // bg-[#fff6eb]
   return (
-    <div className="bg-[#fff6eb]  h-[130vh] md:h-[100vh] flex justify-center items-center">
+    <div className=" gradient-anim h-[130vh] md:h-[100vh] flex justify-center items-center">
       <section id="contact" className="contact   w-[70%] mx-auto    ">
         {/* HEADINGS */}
         <motion.div
@@ -92,7 +93,7 @@ const Contact = () => {
             className="basis-1/2 mt-10 md:mt-0"
           >
             {/* ba7de4a03eb62f2f1abef467fe34c333 */}
-            <form
+            {/* <form
               target="_blank"
               onSubmit={onSubmit}
               action="https://formsubmit.co/ba7de4a03eb62f2f1abef467fe34c333"
@@ -153,10 +154,103 @@ const Contact = () => {
               )}
 
               <button
-                className="p-5 bg-p1 text-white font-semibold  mt-5 hover:bg-black hover:text-white rounded-xl cursor-pointer  transition duration-500"
+                className="py-4 px-6 flex items-center gap-3 bg-p1 text-white font-medium
+                  mt-5 hover:bg-black hover:text-white rounded-full cursor-pointer border transition duration-500"
                 type="submit"
               >
-                SEND ME A MESSAGE
+                SEND ME A MESSAGE <FaArrowRight className="" />
+              </button>
+            </form> */}
+
+            <form className="space-y-6">
+              {/* Name Input */}
+              <div className="group">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-6 py-4 bg-gradient-to-br from-orange-50/80 to-white/90 backdrop-blur-sm 
+                 rounded-xl border border-orange-200/50 focus:border-orange-500 focus:ring-2 
+                 focus:ring-orange-500/20 focus:bg-white transition-all duration-300 outline-none 
+                 placeholder-gray-500 hover:border-orange-300 hover:bg-white/95 font-Poppins"
+                  {...register("name", { required: true, maxLength: 100 })}
+                />
+                {errors.name && (
+                  <p className="text-orange-600 text-sm mt-2 animate-pulse font-Poppins">
+                    {errors.name.type === "required" && "Name is required"}
+                    {errors.name.type === "maxLength" && "Max 100 characters"}
+                  </p>
+                )}
+              </div>
+
+              {/* Email Input */}
+              <div className="group">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full px-6 py-4 bg-gradient-to-br from-orange-50/80 to-white/90 backdrop-blur-sm 
+                 rounded-xl border border-orange-200/50 focus:border-orange-500 focus:ring-2 
+                 focus:ring-orange-500/20 focus:bg-white transition-all duration-300 outline-none 
+                 placeholder-gray-500 hover:border-orange-300 hover:bg-white/95 font-Poppins"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^\S+@\S+$/i,
+                  })}
+                />
+                {errors.email && (
+                  <p className="text-orange-600 text-sm mt-2 animate-pulse font-Poppins">
+                    {errors.email.type === "required" && "Email is required"}
+                    {errors.email.type === "pattern" && "Invalid email format"}
+                  </p>
+                )}
+              </div>
+
+              {/* Message Textarea */}
+              <div className="group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  className="w-full px-6 py-4 bg-gradient-to-br from-orange-50/80 to-white/90 backdrop-blur-sm 
+                 rounded-xl border border-orange-200/50 focus:border-orange-500 focus:ring-2 
+                 focus:ring-orange-500/20 focus:bg-white transition-all duration-300 outline-none 
+                 placeholder-gray-500 resize-none hover:border-orange-300 hover:bg-white/95 font-Poppins"
+                  {...register("message", { required: true, maxLength: 2000 })}
+                />
+                {errors.message && (
+                  <p className="text-orange-600 text-sm mt-2 animate-pulse font-Poppins">
+                    {errors.message.type === "required" &&
+                      "Message is required"}
+                    {errors.message.type === "maxLength" &&
+                      "Max 2000 characters"}
+                  </p>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="group relative w-full py-4 px-8 bg-gradient-to-r from-orange-500 to-orange-600 
+               text-white font-semibold rounded-xl shadow-lg hover:shadow-xl
+               transform hover:-translate-y-1 transition-all duration-300 
+               hover:from-orange-600 hover:to-orange-700 active:scale-95
+               overflow-hidden font-Poppins"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(255, 107, 0, 0.9), rgba(255, 107, 0, 0.8))",
+                }}
+              >
+                <span className="cursor-pointer relative z-10 flex items-center justify-center gap-3">
+                  SEND MESSAGE
+                  <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+
+                {/* Animated background effect */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(16, 16, 16, 0.1), rgba(255, 107, 0, 0.95))",
+                  }}
+                />
               </button>
             </form>
           </motion.div>

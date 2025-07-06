@@ -11,10 +11,8 @@
     "img3": "https://i.ibb.co/LDygPSf5/seven.png",
     "img4": "https://i.ibb.co/fdHwXHYR/eight.png",
     "img5": "https://i.ibb.co/gbHKXq1F/five.png",
-
     "img6": "https://i.ibb.co/gbHKXq1F/five.png",
-
-    "desc1": "This is a full-stack web application that provides a smart rental housing solution",
+    "desc1": "This is a full-stack web application that provides a smart rental housing solution.",
     "desc2": "The platform connects landlords, tenants, and an admin who oversees both users and house listings. Landlords can post and manage rental property listings, while tenants can search for, view, and request rentals. When a landlord approves a rental request, a payment option becomes available to the tenant, and the landlord can provide their phone number for further contact.",
     "technologies": [
       "NextJs",
@@ -25,9 +23,51 @@
       "Express.js",
       "Node.js"
     ],
+    "features": [
+      "Implemented smooth search and filtering functionality for finding the best-matching property.",
+      "Developed an interactive maps feature to enhance the property search experience.",
+      "Built role-based dashboard content access for admin, tenant, and landlord.",
+      "Enabled tenants to apply for rentals and integrated SSLCommerz payment upon landlord approval.",
+      "Secured authentication with MongoDB and JWT, allowing users to manage settings and update passwords."
+    ],
+    "challenges": [
+      "Implementing property filtering and search by location efficiently while maintaining performance.",
+      "Designing a clean and responsive UI for a seamless user experience.",
+      "Handling image uploads and management using Cloudinary.",
+      "Implementing role-based profile and settings management for admin, tenant, and landlord.",
+      "Integrating interactive maps to display searched properties dynamically."
+    ],
+    "futurePlans": [
+      {
+        "id": "faq1",
+        "question": "What new features are planned for RentMode?",
+        "answer": "We plan to integrate advanced analytics dashboards to help landlords and admins track occupancy rates, payment history, and rental trends for better decision-making."
+      },
+      {
+        "id": "faq2",
+        "question": "Will RentMode have a mobile app?",
+        "answer": "Yes, a mobile app for both Android and iOS is planned to allow landlords and tenants to manage properties, pay rent, and track applications directly from their phones."
+      },
+      {
+        "id": "faq3",
+        "question": "Is there a plan to add chat functionality?",
+        "answer": "We plan to add real-time chat and notification systems so that tenants, landlords, and admins can communicate directly for faster coordination on rentals and maintenance."
+      },
+      {
+        "id": "faq4",
+        "question": "Will payment options be expanded?",
+        "answer": "We plan to integrate additional payment gateways like Stripe and PayPal alongside SSLCommerz to make rent collection seamless for both local and international tenants."
+      },
+      {
+        "id": "faq5",
+        "question": "Will the property search feature be improved?",
+        "answer": "Future updates will include advanced filtering options, map-based polygon search, and smart location recommendations to make it even easier for tenants to find their desired rentals."
+      }
+    ],
     "adminEmail": "admin@gmail.com",
     "adminPassword": "12345678"
   },
+
   {
     "id": 2,
     "title": "Project-2",
@@ -53,6 +93,47 @@
       "Express.js",
       "Node.js"
     ],
+    "features": [
+      "Developed a responsive Bike Shop web application with role-based authentication using React.",
+      "Displayed a charted dashboard showing revenue, latest transactions, total earnings, user spending, and more.",
+      "Admin can manage users, products, and orders through the dashboard.",
+      "Users can update their profile information easily from their account dashboard."
+    ],
+    "challenges": [
+      "Writing advanced, maintainable code for multi-role routing in React without violating DRY principles.",
+      "Implementing dynamic dashboard charts to visualize sales and user data effectively.",
+      "Building filtering by category, price range, and search functionality for products, which was a new and valuable experience.",
+      "Integrating a secure payment system for processing orders efficiently.",
+      "Managing CRUD operations for product orders, which was a new learning experience during the development."
+    ],
+    "futurePlans": [
+      {
+        "id": "faq1",
+        "question": "Will the Bike Shop platform have a mobile app?",
+        "answer": "We plan to build a mobile app for Android and iOS to allow customers to browse products, place orders, and track deliveries conveniently."
+      },
+      {
+        "id": "faq2",
+        "question": "Are there plans to enhance the payment system?",
+        "answer": "We plan to integrate additional payment gateways like Stripe and PayPal to provide customers with more secure and flexible payment options."
+      },
+      {
+        "id": "faq3",
+        "question": "Will there be improvements to product search and filtering?",
+        "answer": "Future updates will include advanced filtering options, search suggestions, and personalized recommendations to improve the product discovery experience."
+      },
+      {
+        "id": "faq4",
+        "question": "Is a wishlist feature planned for customers?",
+        "answer": "Yes, we plan to add a wishlist feature so that customers can save products for future purchases and receive notifications when items go on sale."
+      },
+      {
+        "id": "faq5",
+        "question": "Will there be improvements to the admin dashboard?",
+        "answer": "We plan to enhance the admin dashboard with advanced sales analytics, low stock alerts, and customer behavior insights to support informed business decisions."
+      }
+    ],
+
     "adminEmail": "admin@gmail.com",
     "adminPassword": "secure"
   },
@@ -77,6 +158,47 @@
       "Firebase",
       "MongoDB",
       "Express.js"
+    ],
+    "challenges": [
+      "Ensuring full responsiveness across all devices while maintaining a clean design was challenging.",
+      "Implementing like and dislike features with real-time updates on the details page required careful state and database handling.",
+      "Planning and preparing the upcoming 'love' button feature for future pages with consistent real-time updates added complexity.",
+      "Using React hooks and Context API for state management was challenging as this project did not use Redux.",
+      "Integrating JWT authentication alongside Firebase Authentication required careful setup and was challenging to implement securely."
+    ],
+    "features": [
+      "Built a responsive site with Firebase Authentication for secure user management.",
+      "Developed user and admin panels for managing meals and user activities.",
+      "Logged-in users can request meals, give reviews, and like meals within the platform.",
+      "Users can view their submitted reviews and requested meals easily from their dashboard.",
+      "Integrated Stripe payment system for users to join and pay securely."
+    ],
+    "futurePlans": [
+      {
+        "id": "faq1",
+        "question": "Will the meal service platform have a mobile app?",
+        "answer": "Yes, we plan to develop a mobile app for Android and iOS so users can request meals, leave reviews, and manage their accounts on the go."
+      },
+      {
+        "id": "faq2",
+        "question": "Are there plans to add a live order tracking system?",
+        "answer": "We plan to implement a live meal order tracking feature so users can see the preparation and delivery status of their requested meals in real-time."
+      },
+      {
+        "id": "faq3",
+        "question": "Will more payment options be added?",
+        "answer": "We plan to integrate additional payment gateways such as PayPal and mobile wallet options alongside Stripe to make payments more flexible for users."
+      },
+      {
+        "id": "faq4",
+        "question": "Is there a plan to add a loyalty or points system?",
+        "answer": "Yes, we plan to introduce a loyalty points system where users can earn points by ordering meals and leaving reviews, which they can redeem for discounts on future orders."
+      },
+      {
+        "id": "faq5",
+        "question": "Will admin analytics and reporting be improved?",
+        "answer": "Future updates will include advanced admin analytics dashboards with sales trends, popular meals, and user engagement insights to support better business decisions."
+      }
     ],
     "adminEmail": "hero@hero.com",
     "adminPassword": "abcdNn&1"

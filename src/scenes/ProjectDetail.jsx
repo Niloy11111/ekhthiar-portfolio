@@ -1,5 +1,6 @@
+import { ArrowLeft, Check } from "lucide-react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-
+import FuturePlanQuestion from "./FuturePlanQuestion";
 const ProjectDetail = () => {
   const allProjects = useLoaderData();
 
@@ -24,31 +25,160 @@ const ProjectDetail = () => {
     live,
     frontend,
     backend,
+    futurePlans,
+    features,
+    challenges,
     technologies,
   } = clickedProject;
   // w-[70%] mx-auto my-24
   return (
     <>
       <div className="">
-        <div className="h-[90px] flex items-center justify-center">
-          <Link to="/">
-            <button className="cursor-pointer bg-black px-12 h-[50px] text-white ">
-              Go Home
-            </button>
-          </Link>
-        </div>
-        <div className="bg-p1 h-[40vh] w-full flex justify-center items-center">
-          <div>
-            <h1 className=" text-center text-5xl font-semibold">
-              {clickedProject?.name} Details
-            </h1>
-            <p className="font-semibold text-center"> {desc1} </p>
+        <div className="bg-gradient-to-br from-orange-50 to-white">
+          <div className="h-20 flex items-center justify-between px-8">
+            <Link to="/">
+              <button
+                className="flex items-center gap-2 bg-black hover:bg-p1 px-6 py-3 
+                         cursor-pointer text-white font-medium rounded-lg transition-colors duration-300 
+                         font-Poppins"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to Home
+              </button>
+            </Link>
+          </div>
+
+          <div className="bg-gradient-to-r from-p1 to-orange-600 text-white py-16">
+            <div className="max-w-4xl mx-auto px-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Ovo">
+                {clickedProject?.name} Details
+              </h1>
+              <div className="w-20 h-1 bg-white/60 mx-auto mb-4 rounded-full"></div>
+              <p className="text-lg font-medium opacity-90 font-Poppins">
+                {desc1}
+              </p>
+            </div>
           </div>
         </div>
 
-        <section className=" w-[70%] mx-auto my-24 flex gap-10 justify-between">
+        {/* <section className="customWidth flex gap-10  mt-20 customWidth">
+          <div className="w-full  bg-b1 border-gray-300 border rounded-2xl p-3">
+            <h1 className="font-semibold text-center mb-5">Core Features</h1>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+          </div>
+          <div className="w-full  bg-b1 border-gray-300 border rounded-2xl p-3">
+            <h1 className="font-semibold text-center mb-5">Major Challenges</h1>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+            <p className="flex gap-2 items-center">
+              <Check className="bg-p1" /> Implemented smooth search and
+              filtering functionality for finding the best-matching property.
+            </p>
+          </div>
+        </section> */}
+
+        <section className="customWidth flex gap-8 mt-20">
+          <div
+            className="w-full bg-gradient-to-br from-orange-50/50 to-white border border-orange-200/30 
+                  rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h1 className="font-semibold text-xl text-center mb-6 text-black font-Ovo">
+              Core Features
+            </h1>
+            <div className="space-y-4">
+              {features?.map((item, index) => (
+                <div className="flex gap-3 items-start group">
+                  <div
+                    className="w-5 h-5 bg-p1 rounded-full flex items-center justify-center 
+                        flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200"
+                  >
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <p className="text-gray-700 leading-relaxed font-Poppins">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="w-full bg-gradient-to-br from-orange-50/50 to-white border border-orange-200/30 
+                  rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h1 className="font-semibold text-xl text-center mb-6 text-black font-Ovo">
+              Major Challenges
+            </h1>
+            <div className="space-y-4">
+              {challenges?.map((item, index) => (
+                <div className="flex gap-3 items-start group">
+                  <div
+                    className="w-5 h-5 bg-p1 rounded-full flex items-center justify-center 
+                        flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200"
+                  >
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <p className="text-gray-700 leading-relaxed font-Poppins">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="customWidth ">
+          <div className="mt-8 flex flex-wrap gap-3">
+            {technologies?.map((item, index) => (
+              <div
+                key={index}
+                className="group bg-gradient-to-r from-orange-50 to-white border border-orange-200 
+                 rounded-full px-5 py-2 shadow-sm hover:shadow-md 
+                 hover:border-p1 hover:bg-gradient-to-r hover:from-p1/10 hover:to-orange-100/50
+                 transition-all duration-300 cursor-default"
+              >
+                <span
+                  className="text-gray-700 font-medium font-Poppins group-hover:text-p1 
+                       transition-colors duration-300"
+                >
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className=" w-[70%] mx-auto mt-16  mb-24 flex gap-10 justify-between">
           <div className="w-full">
-            <p className="text-gray-900 mb-10"> {desc2}</p>{" "}
+            <p className="text-gray-900 mb-10">
+              {" "}
+              <span className="text-p1 text-xl">***</span>
+              {desc2}
+            </p>{" "}
             <div className="">
               <img
                 className="rounded-bl-none rounded-3xl rounded-br-none"
@@ -85,16 +215,8 @@ const ProjectDetail = () => {
                 </button>
               </a>
             </div>{" "}
-            {/* Technologies */}
-            <section className="mt-8 mb-20">
-              <div className="flex flex-wrap gap-2">
-                {technologies?.map((item) => (
-                  <div className="max-w-max hover:shadow-none transition-all duration-200 rounded-lg bg-amber-50 px-4 py-2 shadow-xl border border-gray-500">
-                    <span> {item}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
+            {/* future plan */}
+            <FuturePlanQuestion futurePlans={futurePlans} projectTitle={name} />
           </div>
 
           <div className="w-full lg:mb-24">

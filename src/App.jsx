@@ -30,22 +30,23 @@ function App() {
 
   return (
     <div className=" app bg-deep-blue ">
-      <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      {/*  before <div className="w-5/6 mx-auto md:h-full"> */}
-      <div className="md:h-full ">
-        {isDesktop && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
-        <Landing setSelectedPage={setSelectedPage} />
+      <div className="  gradient-anim">
+        <Navbar
+          isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+        {/*  before <div className="w-5/6 mx-auto md:h-full"> */}
+        <div className="md:h-full ">
+          {isDesktop && (
+            <DotGroup
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          )}
+          <Landing setSelectedPage={setSelectedPage} />
+        </div>
       </div>
-
       <div className=" w-[70%] mx-auto  ">
         <motion.div
           margin="0 0 -200px 0"
