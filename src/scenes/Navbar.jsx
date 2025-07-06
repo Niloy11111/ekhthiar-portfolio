@@ -154,7 +154,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         </AnchorLink> */}
 
-        <AnchorLink href="#contact" onClick={() => setSelectedPage("contact")}>
+        <AnchorLink
+          className="hidden md:block"
+          href="#contact"
+          onClick={() => setSelectedPage("contact")}
+        >
           <div
             className="group py-3 px-4 cursor-pointer justify-center gap-3 
     border border-gray-300 hover:border-p1/50

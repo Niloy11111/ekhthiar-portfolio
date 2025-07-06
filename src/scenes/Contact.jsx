@@ -40,7 +40,7 @@ const Contact = () => {
   };
   // bg-[#fff6eb]
   return (
-    <div className=" gradient-anim h-[130vh] md:h-[100vh] flex justify-center items-center">
+    <div className="mt-16 gradient-anim h-[130vh] md:h-[100vh] flex justify-center items-center">
       <section id="contact" className="contact   w-[70%] mx-auto    ">
         {/* HEADINGS */}
         <motion.div

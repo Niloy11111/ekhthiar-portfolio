@@ -53,7 +53,7 @@ const AboutMe = () => {
             <div className="flex mx-auto justify-center gap-6">
               <div
                 className="group flex-1 flex flex-col items-center text-center
-    bg-white border border-gray-200 hover:border-blue-300
+    bg-white border border-gray-200 hover:border-p1/40
     rounded-2xl px-6 py-8 shadow-md hover:shadow-xl
     transition-all duration-500 hover:-translate-y-1"
               >
@@ -63,13 +63,13 @@ const AboutMe = () => {
                   alt=""
                 />
                 <h1 className="font-bold text-lg mb-2">Experience</h1>
-                <p className="text-blue-600 font-semibold">1+ Years</p>
+                <p className="text-p1 font-semibold">1+ Years</p>
                 <p className="text-gray-600">MERN Stack Development</p>
               </div>
 
               <div
                 className="group flex-1 flex flex-col items-center text-center
-    bg-white border border-gray-200 hover:border-blue-300
+    bg-white border border-gray-200 hover:hover:border-p1/40
     rounded-2xl px-6 py-8 shadow-md hover:shadow-xl
     transition-all duration-500 hover:-translate-y-1"
               >
@@ -79,7 +79,7 @@ const AboutMe = () => {
                   alt=""
                 />
                 <h1 className="font-bold text-lg mb-2">Education</h1>
-                <p className="text-blue-600 font-semibold">Bachelor's Degree</p>
+                <p className="text-p1 font-semibold">Bachelor's Degree</p>
                 <p className="text-gray-600">Business Administration</p>
               </div>
             </div>
@@ -111,7 +111,7 @@ const AboutMe = () => {
             <div className="mt-8 space-y-6">
               <p className="text-gray-700 text-left leading-relaxed text-lg">
                 I am a{" "}
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-p1">
                   MERN Stack developer
                 </span>{" "}
                 with expertise in full-stack web development. My technical

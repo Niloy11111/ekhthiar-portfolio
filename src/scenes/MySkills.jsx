@@ -376,7 +376,7 @@ const MySkills = () => {
             >
               <div
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl 
-        border border-gray-100 hover:border-blue-200
+        border border-gray-100 hover:hover:border-p1/40
         transition-all duration-500 hover:-translate-y-2
         flex flex-col items-center text-center space-y-4"
               >
@@ -394,7 +394,7 @@ const MySkills = () => {
 
                 <h3
                   className="font-semibold text-lg text-gray-800 
-          transition-colors duration-300 group-hover:text-blue-600"
+          transition-colors duration-300 group-hover:text-p1"
                 >
                   {skill.name}
                 </h3>
